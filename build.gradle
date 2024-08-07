@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'com.gradle.plugin-publish' version '1.2.1'
+}
+
+version = '0.0.7'
+group = 'me.gravityio'
+
+base {
+    archivesName = 'ReplacementPlugin'
+}
+
+gradlePlugin {
+    // Define the plugin
+    plugins {
+        replacement {
+            id = 'me.gravityio.replacementplugin'
+            implementationClass = 'me.gravityio.replacement.ReplacementPlugin'
+            displayName = 'ReplacementPlugin'
+        }
+    }
+}
